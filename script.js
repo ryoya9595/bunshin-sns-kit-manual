@@ -1,9 +1,6 @@
 const PROMPTS = {
   promptCheck: "この保管庫にあるノートを一覧して",
   promptSetup: "セットアップ.md の通りにセットアップして",
-  promptFallback: "セットアップ.md を読んで、その手順どおりに実行して",
-  promptFallbackMac: "キットのコピーは cp -R でやり直して",
-  promptFallbackWin: "キットのコピーは PowerShell の Copy-Item -Recurse でやり直して",
   promptSelfIntro: "自己紹介して",
   promptAbeInsta: "ClaudeとCanvaの連携ネタで、お手本を1本お願いします",
   promptAbeYoutube: "AI副業の始め方で、お手本を1本お願いします",
