@@ -26,7 +26,7 @@
         <a href="#chapter2">第2章 キットを受け取る</a>
         <a href="#chapter3">第3章 一括セットアップ</a>
         <a href="#chapter4">第4章 分身AIを立ち上げる</a>
-        <a href="#chapter5">第5章 あべさんのお手本</a>
+        <a href="#chapter5">第5章 あべむつきのお手本</a>
         <a href="#chapter6">第6章 自分のキットを育てる</a>
         <a href="#chapter7">第7章 自分だけのスキル</a>
       </div>
@@ -39,9 +39,9 @@
         <p>本マニュアルは、あなたの「分身AI」と「SNS投稿キット（6つのスキル）」をClaude Codeに導入し、SNSの台本づくりを任せられる状態にするための手順を解説します。</p>
         <ul>
           <li><strong>配布したキット一式は、第三者への配布・共有NGです</strong>（あなた専用です）。</li>
-          <li>キットの中には、見本として<strong>あべむつきさんの設定・実例・実測数字</strong>が入っています。<strong>その数字・実績・体験談を自分のものとして発信しないでください</strong>（実績詐称・丸パクリになります。借りてよいのは型・構成だけ）。</li>
+          <li>キットの中には、見本として<strong>あべむつきの設定・実例・実測数字</strong>が入っています。<strong>その数字・実績・体験談を自分のものとして発信しないでください</strong>（実績詐称・丸パクリになります。借りてよいのは型・構成だけ）。</li>
           <li>キットの構造ファイル（SKILL.md・CLAUDE.md・READMEなど）は自分で書き換えないでください。ルールを変えたいときは、AIに言葉で伝えればOKです。</li>
-          <li>重要なファイル、機密情報、APIキー、パスワードなどは、保管庫フォルダに入れないでください。</li>
+          <li>重要なファイル、機密情報、APIキー、パスワードなどは、Obsidianフォルダに入れないでください。</li>
         </ul>
         <details class="disclaimer">
           <summary>📄 免責事項</summary>
@@ -54,8 +54,8 @@
         <h2>第1章　事前準備ができているか確認する</h2>
         <p>このマニュアルは、事前準備（宿題）が終わっている前提で進みます。まず、次の2つを確認しましょう。</p>
 
-        <h3>1. Obsidianの保管庫がClaude Codeとつながっているか</h3>
-        <p>Claude Codeで自分の保管庫（Obsidianフォルダ）を開き、チャットにこう送ってみてください。</p>
+        <h3>1. ObsidianフォルダがClaude Codeとつながっているか</h3>
+        <p>Claude Codeで自分のObsidianフォルダを開き、チャットにこう送ってみてください。</p>
         <div class="prompt-card">
           <div class="prompt-head">
             <span>連携チェック</span>
@@ -65,7 +65,7 @@
         </div>
         <p><code>ようこそ.md</code> が一覧に返ってきたら準備OKです。</p>
         <div class="callout warn">
-          <p><strong>まだ保管庫を作っていない・連携していない方は、先にこちら。</strong><br />事前準備マニュアル（Obsidian × Claude Code 導入・連携）を済ませてから、このページに戻ってきてください。</p>
+          <p><strong>まだObsidianフォルダを作っていない・連携していない方は、先にこちら。</strong><br />事前準備マニュアル（Obsidian × Claude Code 導入・連携）を済ませてから、このページに戻ってきてください。</p>
           <p><a class="btn-link" href="#" target="_blank" rel="noopener noreferrer">🔰 事前準備マニュアルはこちら（Notion）</a></p>
         </div>
 
@@ -76,7 +76,9 @@
       <!-- 第2章 -->
       <section id="chapter2" class="block">
         <h2>第2章　キットを受け取って解凍する</h2>
-        <p>配布された <code>SNS投稿kit導入セット.zip</code> を、まず「フォルダ」に戻します（解凍）。<strong>zipのままでは使えません。</strong></p>
+        <p>まず、キット一式（<code>SNS投稿kit導入セット.zip</code>）を下のボタンからダウンロードしてください。</p>
+        <p><a class="btn-link" href="SNS%E6%8A%95%E7%A8%BFkit%E5%B0%8E%E5%85%A5%E3%82%BB%E3%83%83%E3%83%88.zip" download>📦 SNS投稿kit導入セット.zip をダウンロード</a></p>
+        <p>ダウンロードしたら、「フォルダ」に戻します（解凍）。<strong>zipのままでは使えません。</strong></p>
 
         <h3>Macの方</h3>
         <p>zipファイルを<strong>ダブルクリック</strong>するだけ。「SNS投稿kit導入セット」フォルダができます。</p>
@@ -92,7 +94,7 @@
             <tbody>
               <tr><td><code>セットアップ.md</code></td><td>★これをAIに読ませると、導入が全部自動で進む「指示書」</td></tr>
               <tr><td><code>insta-kit</code> / <code>youtube-kit</code></td><td>あなた専用の台本キット（使いながら育てる）</td></tr>
-              <tr><td><code>abe-insta-kit</code> / <code>abe-youtube-kit</code></td><td>あべむつきさんのお手本キット（見て学ぶ用）</td></tr>
+              <tr><td><code>abe-insta-kit</code> / <code>abe-youtube-kit</code></td><td>あべむつきのお手本キット（見て学ぶ用）</td></tr>
             </tbody>
           </table>
         </div>
@@ -104,8 +106,8 @@
         <h2>第3章　AIに一括セットアップしてもらう</h2>
         <p>ここが今日のメインです。といっても、やることは<strong>「1つのファイルをドラッグして、ひとこと送る」だけ</strong>。あとはAIが、キット4箱の引っ越しから6つのスキルの設置まで全部やってくれます。</p>
 
-        <h3>1. Claude Codeで自分の保管庫を開く</h3>
-        <p>第1章で確認した、自分のObsidian保管庫を開いた状態にします。</p>
+        <h3>1. Claude Codeで自分のObsidianフォルダを開く</h3>
+        <p>第1章で確認した、自分のObsidianフォルダを開いた状態にします。</p>
 
         <h3>2. セットアップ.md をチャットにドラッグ＆ドロップする</h3>
         <p>解凍したフォルダの中の <code>セットアップ.md</code> を、Claude Codeのチャット入力欄にドラッグ＆ドロップします。</p>
@@ -126,7 +128,7 @@
         <figure class="shot"><img src="images/03-permission.png" alt="許可ダイアログは常に許可でOK" /><figcaption>許可の確認は〈常に許可〉でOK</figcaption></figure>
 
         <h3>4. 【重要】新しいセッションを開き直す</h3>
-        <p>「スイッチ6つ、取り付け完了！」と出たら、いったんチャットを終了して、<strong>保管庫を開いたまま新しいセッションを開始</strong>してください。スキル（呼び出しボタン）は、開き直したときに読み込まれます。</p>
+        <p>「スイッチ6つ、取り付け完了！」と出たら、いったんチャットを終了して、<strong>Obsidianフォルダを開いたまま新しいセッションを開始</strong>してください。スキル（呼び出しボタン）は、開き直したときに読み込まれます。</p>
         <p>新しいセッションで入力欄に「<code>/</code>」を打って、<code>my-bunshin-ai</code> などが候補に出てきたら成功です。</p>
         <figure class="shot"><img src="images/04-skill-list.png" alt="スラッシュを打つとスキル候補が出る" /><figcaption>「/」を打つと6つのスキルが候補に出る</figcaption></figure>
 
@@ -145,7 +147,7 @@
           <pre id="promptFallbackWin"></pre>
         </div>
         <div class="callout info">
-          <p>それでもダメなときは、解凍フォルダ内の4つのキットフォルダを、Finder／エクスプローラーで保管庫フォルダの中に手でドラッグしてもOK。そのあと「続きをやって」と送れば再開します。</p>
+          <p>それでもダメなときは、解凍フォルダ内の4つのキットフォルダを、Finder／エクスプローラーでObsidianフォルダの中に手でドラッグしてもOK。そのあと「続きをやって」と送れば再開します。</p>
         </div>
       </section>
 
@@ -158,7 +160,7 @@
         <p>入力欄に「<code>/my-bunshin-ai</code>」と打って送信します。「完成した分身AIプロンプトを貼ってね」と案内が来ます。</p>
 
         <h3>2. 完成版の分身AIプロンプトを貼る</h3>
-        <p>手元に用意しておいた分身AIプロンプトの全文を、そのままチャットに貼りつけて送信します。AIが保管庫の中（<code>core/分身AIプロンプト.md</code>）に登録してくれます。</p>
+        <p>手元に用意しておいた分身AIプロンプトの全文を、そのままチャットに貼りつけて送信します。AIがObsidianフォルダの中（<code>core/分身AIプロンプト.md</code>）に登録してくれます。</p>
 
         <h3>3. 「自己紹介して」で動作テスト</h3>
         <div class="prompt-card">
@@ -176,8 +178,8 @@
 
       <!-- 第5章 -->
       <section id="chapter5" class="block">
-        <h2>第5章　あべさんのお手本を体験する（両方やる）</h2>
-        <p>自分のキットを育てる前に、<strong>「プロならこう作る」を先に見ておきましょう</strong>。お手本キットは、セットアップ不要・<strong>ネタ案を渡すだけ</strong>で、あべむつきさんの設定でプロの台本を1本作って見せてくれます。</p>
+        <h2>第5章　あべむつきのお手本を体験する（両方やる）</h2>
+        <p>自分のキットを育てる前に、<strong>「プロならこう作る」を先に見ておきましょう</strong>。お手本キットは、セットアップ不要・<strong>ネタ案を渡すだけ</strong>で、あべむつきの設定でプロの台本を1本作って見せてくれます。</p>
 
         <h3>1. インスタのお手本（/my-abeinsta）</h3>
         <p>「<code>/my-abeinsta</code>」と打って、作ってほしいネタを伝えます。例：</p>
@@ -194,7 +196,7 @@
         </div>
         <p>どちらも「設計3行（型・狙い・使う事実）」つきで台本が出てきます。<strong>プロがどう考えて組み立てているか</strong>に注目して見てください。</p>
         <div class="callout warn">
-          <p><strong>お手本の文章・数字・実績・体験談は、全部あべむつきさんのものです。</strong>自分の投稿・動画にそのまま使うのは絶対NG。参考にしていいのは<strong>型・構成・作り方の流れだけ</strong>です。</p>
+          <p><strong>お手本の文章・数字・実績・体験談は、全部あべむつきのものです。</strong>自分の投稿・動画にそのまま使うのは絶対NG。参考にしていいのは<strong>型・構成・作り方の流れだけ</strong>です。</p>
         </div>
       </section>
 
