@@ -64,6 +64,7 @@
           <pre id="promptCheck"></pre>
         </div>
         <p><code>ようこそ.md</code> が一覧に返ってきたら準備OKです。</p>
+        <figure class="shot"><img src="images/00-check-vault.png" alt="ようこそ.mdが一覧に返ってくる" /><figcaption>「ようこそ.md」が返ってくればOK</figcaption></figure>
         <div class="callout warn">
           <p><strong>まだObsidianフォルダを作っていない・連携していない方は、先にこちら。</strong><br />事前準備マニュアル（Obsidian × Claude Code 導入・連携）を済ませてから、このページに戻ってきてください。</p>
           <p><a class="btn-link" href="#" target="_blank" rel="noopener noreferrer">🔰 事前準備マニュアルはこちら（Notion）</a></p>
@@ -88,6 +89,7 @@
         <figure class="shot"><img src="images/01-unzip.png" alt="zipを解凍してフォルダを作る" /><figcaption>解凍すると「SNS投稿kit導入セット」フォルダができる</figcaption></figure>
 
         <h3>フォルダの中身</h3>
+        <figure class="shot"><img src="images/01b-kit-contents.png" alt="解凍したフォルダの中身" /><figcaption>キット4フォルダ＋セットアップ.md が入っている</figcaption></figure>
         <div class="table-wrap">
           <table>
             <thead><tr><th>中身</th><th>なにもの？</th></tr></thead>
@@ -127,9 +129,9 @@
         </div>
         <figure class="shot"><img src="images/03-permission.png" alt="許可ダイアログは常に許可でOK" /><figcaption>許可の確認は〈常に許可〉でOK</figcaption></figure>
 
-        <h3>4. 【重要】新しいセッションを開き直す</h3>
-        <p>「スイッチ6つ、取り付け完了！」と出たら、いったんチャットを終了して、<strong>Obsidianフォルダを開いたまま新しいセッションを開始</strong>してください。スキル（呼び出しボタン）は、開き直したときに読み込まれます。</p>
-        <p>新しいセッションで入力欄に「<code>/</code>」を打って、<code>my-bunshin-ai</code> などが候補に出てきたら成功です。</p>
+        <h3>4. 【重要】Claude Codeアプリを再起動する</h3>
+        <p>「スイッチ6つ、取り付け完了！」と出たら、<strong>Claude Codeのアプリをいったん終了して、開き直して</strong>ください（新しいチャットを開くだけでは、スキルが読み込まれないことがあります）。</p>
+        <p>再起動後、入力欄に「<code>/</code>」を打って、<code>my-bunshin-ai</code> などが候補に出てきたら成功です。</p>
         <figure class="shot"><img src="images/04-skill-list.png" alt="スラッシュを打つとスキル候補が出る" /><figcaption>「/」を打つと6つのスキルが候補に出る</figcaption></figure>
 
       </section>
@@ -186,7 +188,7 @@
       <!-- 第6章 -->
       <section id="chapter6" class="block">
         <h2>第6章　自分のキットを組み立てて育てる</h2>
-        <p>お手本の感覚が掴めたら、いよいよ自分のキットです。<strong>メインの発信に近い方から1つ</strong>選んでください（もう片方は帰ってからでOK）。</p>
+        <p>お手本の感覚が掴めたら、いよいよ自分のキットです。<strong>メインの発信に近い方から1つ</strong>選んでください。</p>
 
         <h3>1. スキルを呼んで「はじめる」</h3>
         <p>「<code>/my-insta</code>」または「<code>/my-youtube</code>」と打つと、AIが5つの棚を順番に一緒に組み立ててくれます（自分のこと → 知識 → 書き方の好み → 言わない言葉 → 参考の見本）。</p>
@@ -199,13 +201,8 @@
 
         <h3>3. ダメ出しして育てる</h3>
         <p><strong>最初から完璧な台本は出ません。それが正常です。</strong>「ここが違う」とフィードバックするほど、あなた専用ルールが増えて、一発目の精度がどんどん上がっていきます。</p>
-
-        <h3>ふだんの使い方の例</h3>
-        <div class="example-grid">
-          <div class="example"><span class="example-tag">台本を作る</span><code>/my-insta ◯◯の台本を作って</code></div>
-          <div class="example"><span class="example-tag">ネタから任せる</span><code>/my-youtube ネタも任せるから台本を作って</code></div>
-          <div class="example"><span class="example-tag">見本を貯める</span><code>/my-insta この台本をストックして（＋伸びてる台本を貼る）</code></div>
-          <div class="example"><span class="example-tag">数字を報告する</span><code>/my-insta 数字を報告します。再生◯・保存◯・いいね◯</code></div>
+        <div class="callout info">
+          <p>スキルを立ち上げたら、あとはスキルの案内に沿って台本作成を進めましょう！</p>
         </div>
       </section>
 
@@ -224,7 +221,7 @@
           <li>リサーチや素材集めを代わりにやるスキル</li>
         </ul>
         <div class="callout info">
-          <p>新しく作ったスキルは、新しいセッションを開くと「/」の候補に現れます。今日の6つと同じように、あなたの仕事に合わせてどんどん増やしていけます。</p>
+          <p>新しく作ったスキルは、Claude Codeアプリを再起動すると「/」の候補に現れます。今日の6つと同じように、あなたの仕事に合わせてどんどん増やしていけます。</p>
         </div>
         <p class="closing-line">AIは、育てるほど、あなたになる。</p>
       </section>
