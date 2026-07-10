@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>分身AI × SNS投稿キット 導入マニュアル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">分身AI × SNS投稿キット</p>
+        <h1>導入マニュアル</h1>
+        <p class="subtitle">あなたの分身AIをClaude Codeで動かして、SNS台本づくりを一気にラクにしよう</p>
+        <p class="author">マニュアル制作者：りょうや</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="目次">
+      <div class="toc-inner">
+        <span class="toc-title">目次</span>
+        <a href="#notice">注意事項</a>
+        <a href="#chapter1">第1章 事前準備の確認</a>
+        <a href="#chapter2">第2章 キットを受け取る</a>
+        <a href="#chapter3">第3章 一括セットアップ</a>
+        <a href="#chapter4">第4章 分身AIを立ち上げる</a>
+        <a href="#chapter5">第5章 あべさんのお手本</a>
+        <a href="#chapter6">第6章 自分のキットを育てる</a>
+        <a href="#chapter7">第7章 自分だけのスキル</a>
+      </div>
+    </nav>
+
+    <main class="content">
+      <!-- 注意事項 -->
+      <section id="notice" class="block">
+        <h2>⚠️ 使用上の注意事項</h2>
+        <p>本マニュアルは、あなたの「分身AI」と「SNS投稿キット（6つのスキル）」をClaude Codeに導入し、SNSの台本づくりを任せられる状態にするための手順を解説します。</p>
+        <ul>
+          <li><strong>配布したキット一式は、第三者への配布・共有NGです</strong>（あなた専用です）。</li>
+          <li>キットの中には、見本として<strong>あべむつきさんの設定・実例・実測数字</strong>が入っています。<strong>その数字・実績・体験談を自分のものとして発信しないでください</strong>（実績詐称・丸パクリになります。借りてよいのは型・構成だけ）。</li>
+          <li>キットの構造ファイル（SKILL.md・CLAUDE.md・READMEなど）は自分で書き換えないでください。ルールを変えたいときは、AIに言葉で伝えればOKです。</li>
+          <li>重要なファイル、機密情報、APIキー、パスワードなどは、保管庫フォルダに入れないでください。</li>
+        </ul>
+        <details class="disclaimer">
+          <summary>📄 免責事項</summary>
+          <p>本マニュアルは情報提供を目的として作成されたものであり、内容の正確性・完全性・最新性を保証するものではありません。記載された手順・設定・操作等を実行したことにより生じたいかなる損害についても、作成者は一切の責任を負いません。利用はすべて利用者ご自身の判断と自己責任のもとで行ってください。AnthropicおよびClaude Codeの仕様・料金・利用条件は予告なく変更される場合があるため、必ず公式情報をご確認ください。</p>
+        </details>
+      </section>
+
+      <!-- 第1章 -->
+      <section id="chapter1" class="block">
+        <h2>第1章　事前準備ができているか確認する</h2>
+        <p>このマニュアルは、事前準備（宿題）が終わっている前提で進みます。まず、次の2つを確認しましょう。</p>
+
+        <h3>1. Obsidianの保管庫がClaude Codeとつながっているか</h3>
+        <p>Claude Codeで自分の保管庫（Obsidianフォルダ）を開き、チャットにこう送ってみてください。</p>
+        <div class="prompt-card">
+          <div class="prompt-head">
+            <span>連携チェック</span>
+            <button type="button" class="copy-btn" data-target="promptCheck">コピー</button>
+          </div>
+          <pre id="promptCheck"></pre>
+        </div>
+        <p><code>ようこそ.md</code> が一覧に返ってきたら準備OKです。</p>
+        <div class="callout warn">
+          <p><strong>まだ保管庫を作っていない・連携していない方は、先にこちら。</strong><br />事前準備マニュアル（Obsidian × Claude Code 導入・連携）を済ませてから、このページに戻ってきてください。</p>
+          <p><a class="btn-link" href="#" target="_blank" rel="noopener noreferrer">🔰 事前準備マニュアルはこちら（Notion）</a></p>
+        </div>
+
+        <h3>2. 分身AIプロンプトが完成しているか</h3>
+        <p>前のパートで作った「完成版の分身AIプロンプト」を、コピペできる状態で手元に用意しておいてください（第4章で使います）。</p>
+      </section>
+
+      <!-- 第2章 -->
+      <section id="chapter2" class="block">
+        <h2>第2章　キットを受け取って解凍する</h2>
+        <p>配布された <code>SNS投稿kit導入セット.zip</code> を、まず「フォルダ」に戻します（解凍）。<strong>zipのままでは使えません。</strong></p>
+
+        <h3>Macの方</h3>
+        <p>zipファイルを<strong>ダブルクリック</strong>するだけ。「SNS投稿kit導入セット」フォルダができます。</p>
+
+        <h3>Windowsの方</h3>
+        <p>zipファイルを<strong>右クリック →「すべて展開」</strong>。「開く」だけだと展開されないので注意してください。</p>
+        <figure class="shot"><img src="images/01-unzip.png" alt="zipを解凍してフォルダを作る" /><figcaption>解凍すると「SNS投稿kit導入セット」フォルダができる</figcaption></figure>
+
+        <h3>フォルダの中身</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>中身</th><th>なにもの？</th></tr></thead>
+            <tbody>
+              <tr><td><code>セットアップ.md</code></td><td>★これをAIに読ませると、導入が全部自動で進む「指示書」</td></tr>
+              <tr><td><code>insta-kit</code> / <code>youtube-kit</code></td><td>あなた専用の台本キット（使いながら育てる）</td></tr>
+              <tr><td><code>abe-insta-kit</code> / <code>abe-youtube-kit</code></td><td>あべむつきさんのお手本キット（見て学ぶ用）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 第3章 メイン -->
+      <section id="chapter3" class="block highlight">
+        <span class="badge">★ いちばん大事な手順</span>
+        <h2>第3章　AIに一括セットアップしてもらう</h2>
+        <p>ここが今日のメインです。といっても、やることは<strong>「1つのファイルをドラッグして、ひとこと送る」だけ</strong>。あとはAIが、キット4箱の引っ越しから6つのスキルの設置まで全部やってくれます。</p>
+
+        <h3>1. Claude Codeで自分の保管庫を開く</h3>
+        <p>第1章で確認した、自分のObsidian保管庫を開いた状態にします。</p>
+
+        <h3>2. セットアップ.md をチャットにドラッグ＆ドロップする</h3>
+        <p>解凍したフォルダの中の <code>セットアップ.md</code> を、Claude Codeのチャット入力欄にドラッグ＆ドロップします。</p>
+        <figure class="shot"><img src="images/02-drag-setup.png" alt="セットアップ.mdをチャットにドラッグ" /><figcaption>セットアップ.md をチャット欄へドラッグ＆ドロップ</figcaption></figure>
+
+        <h3>3. 続けて、このひとことを送る</h3>
+        <div class="prompt-card">
+          <div class="prompt-head">
+            <span>セットアップ開始のひとこと</span>
+            <button type="button" class="copy-btn" data-target="promptSetup">コピー</button>
+          </div>
+          <pre id="promptSetup"></pre>
+        </div>
+        <p>送信すると、AIが3ステップ（📦引っ越し → 🔧スイッチの取り付け → 🚀起動チェックの案内）を自動で進めます。</p>
+        <div class="callout info">
+          <p>途中で「許可しますか？」と聞かれたら、<strong>〈許可〉または〈常に許可〉</strong>を押して進めてください。キットのファイルを用意しているだけなので大丈夫です。</p>
+        </div>
+        <figure class="shot"><img src="images/03-permission.png" alt="許可ダイアログは常に許可でOK" /><figcaption>許可の確認は〈常に許可〉でOK</figcaption></figure>
+
+        <h3>4. 【重要】新しいセッションを開き直す</h3>
+        <p>「スイッチ6つ、取り付け完了！」と出たら、いったんチャットを終了して、<strong>保管庫を開いたまま新しいセッションを開始</strong>してください。スキル（呼び出しボタン）は、開き直したときに読み込まれます。</p>
+        <p>新しいセッションで入力欄に「<code>/</code>」を打って、<code>my-bunshin-ai</code> などが候補に出てきたら成功です。</p>
+        <figure class="shot"><img src="images/04-skill-list.png" alt="スラッシュを打つとスキル候補が出る" /><figcaption>「/」を打つと6つのスキルが候補に出る</figcaption></figure>
+
+        <h3>うまく始まらないときの保険</h3>
+        <p>自動で始まらない・途中で止まったときは、下のどれかをコピペして送ってください。</p>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>保険①（共通）自動で始まらないとき</span><button type="button" class="copy-btn" data-target="promptFallback">コピー</button></div>
+          <pre id="promptFallback"></pre>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>保険②（Mac）キットのコピーで詰まったとき</span><button type="button" class="copy-btn" data-target="promptFallbackMac">コピー</button></div>
+          <pre id="promptFallbackMac"></pre>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>保険③（Windows）キットのコピーで詰まったとき</span><button type="button" class="copy-btn" data-target="promptFallbackWin">コピー</button></div>
+          <pre id="promptFallbackWin"></pre>
+        </div>
+        <div class="callout info">
+          <p>それでもダメなときは、解凍フォルダ内の4つのキットフォルダを、Finder／エクスプローラーで保管庫フォルダの中に手でドラッグしてもOK。そのあと「続きをやって」と送れば再開します。</p>
+        </div>
+      </section>
+
+      <!-- 第4章 -->
+      <section id="chapter4" class="block">
+        <h2>第4章　分身AIを立ち上げる</h2>
+        <p>まずは、あなたの分身AIに命を吹き込みます。</p>
+
+        <h3>1. /my-bunshin-ai と打つ</h3>
+        <p>入力欄に「<code>/my-bunshin-ai</code>」と打って送信します。「完成した分身AIプロンプトを貼ってね」と案内が来ます。</p>
+
+        <h3>2. 完成版の分身AIプロンプトを貼る</h3>
+        <p>手元に用意しておいた分身AIプロンプトの全文を、そのままチャットに貼りつけて送信します。AIが保管庫の中（<code>core/分身AIプロンプト.md</code>）に登録してくれます。</p>
+
+        <h3>3. 「自己紹介して」で動作テスト</h3>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>動作テスト</span><button type="button" class="copy-btn" data-target="promptSelfIntro">コピー</button></div>
+          <pre id="promptSelfIntro"></pre>
+        </div>
+        <p>あなたらしい口調・内容で返ってきたら、分身AIの完成です🎉</p>
+
+        <h3>4. ダメ出しを1つして「育つ」のを見る</h3>
+        <p>返事に対して「そうじゃない、もっとこう」と1つ直してみてください。分身AIが<strong>教育ノート</strong>にメモして、同じ注意を二度としなくなります。会話の中の大事なことは<strong>記録フォルダ</strong>に自動で貯まっていき、使うほどあなたに詳しくなります。</p>
+        <div class="callout info">
+          <p>これからは、このスキルを呼ぶだけでいつでも分身AIが立ち上がります。相談・壁打ち・文章チェック、なんでも話しかけてOKです。</p>
+        </div>
+      </section>
+
+      <!-- 第5章 -->
+      <section id="chapter5" class="block">
+        <h2>第5章　あべさんのお手本を体験する（両方やる）</h2>
+        <p>自分のキットを育てる前に、<strong>「プロならこう作る」を先に見ておきましょう</strong>。お手本キットは、セットアップ不要・<strong>ネタ案を渡すだけ</strong>で、あべむつきさんの設定でプロの台本を1本作って見せてくれます。</p>
+
+        <h3>1. インスタのお手本（/my-abeinsta）</h3>
+        <p>「<code>/my-abeinsta</code>」と打って、作ってほしいネタを伝えます。例：</p>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>お手本の頼み方（インスタ）</span><button type="button" class="copy-btn" data-target="promptAbeInsta">コピー</button></div>
+          <pre id="promptAbeInsta"></pre>
+        </div>
+
+        <h3>2. YouTubeのお手本（/my-abeyoutube）</h3>
+        <p>「<code>/my-abeyoutube</code>」と打って、同じようにネタを伝えます。例：</p>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>お手本の頼み方（YouTube）</span><button type="button" class="copy-btn" data-target="promptAbeYoutube">コピー</button></div>
+          <pre id="promptAbeYoutube"></pre>
+        </div>
+        <p>どちらも「設計3行（型・狙い・使う事実）」つきで台本が出てきます。<strong>プロがどう考えて組み立てているか</strong>に注目して見てください。</p>
+        <div class="callout warn">
+          <p><strong>お手本の文章・数字・実績・体験談は、全部あべむつきさんのものです。</strong>自分の投稿・動画にそのまま使うのは絶対NG。参考にしていいのは<strong>型・構成・作り方の流れだけ</strong>です。</p>
+        </div>
+      </section>
+
+      <!-- 第6章 -->
+      <section id="chapter6" class="block">
+        <h2>第6章　自分のキットを組み立てて育てる</h2>
+        <p>お手本の感覚が掴めたら、いよいよ自分のキットです。<strong>メインの発信に近い方から1つ</strong>選んでください（もう片方は帰ってからでOK）。</p>
+
+        <h3>1. スキルを呼んで「はじめる」</h3>
+        <p>「<code>/my-insta</code>」または「<code>/my-youtube</code>」と打つと、AIが5つの棚を順番に一緒に組み立ててくれます（自分のこと → 知識 → 書き方の好み → 言わない言葉 → 参考の見本）。</p>
+        <div class="callout info">
+          <p>質問に完璧に答えられなくても大丈夫。「分からない」と言えばAIが仮置き案を出します。<strong>完成度7割でOK</strong>。手元に無いものは「あとで」でスキップできます。</p>
+        </div>
+
+        <h3>2. 1本目の台本を作る</h3>
+        <p>組み立てが終わると、AIがそのまま「1本目の台本を作りましょう」と案内します。AIが先に見せてくる<strong>「設計メモ」（どう書くかの計画）</strong>にOKを出すと、台本が届きます。</p>
+
+        <h3>3. ダメ出しして育てる</h3>
+        <p><strong>最初から完璧な台本は出ません。それが正常です。</strong>「ここが違う」とフィードバックするほど、あなた専用ルールが増えて、一発目の精度がどんどん上がっていきます。</p>
+
+        <h3>ふだんの使い方の例</h3>
+        <div class="example-grid">
+          <div class="example"><span class="example-tag">台本を作る</span><code>/my-insta ◯◯の台本を作って</code></div>
+          <div class="example"><span class="example-tag">ネタから任せる</span><code>/my-youtube ネタも任せるから台本を作って</code></div>
+          <div class="example"><span class="example-tag">見本を貯める</span><code>/my-insta この台本をストックして（＋伸びてる台本を貼る）</code></div>
+          <div class="example"><span class="example-tag">数字を報告する</span><code>/my-insta 数字を報告します。再生◯・保存◯・いいね◯</code></div>
+        </div>
+      </section>
+
+      <!-- 第7章 発展 -->
+      <section id="chapter7" class="block closing">
+        <h2>第7章　発展編：自分だけのスキルを作る</h2>
+        <p>ここまでに使った6つのスキルは、じつは全部同じ仕組みでできています。ということは——<strong>あなたの繰り返し作業も、同じようにスキルにできます。</strong></p>
+        <p>「<code>/my-obsidian-skill</code>」と打つと、AI秘書が「毎回やっていて面倒なこと」をヒアリングして、あなた専用の新しいスキルを一緒に作ってくれます。</p>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>スキル化の相談</span><button type="button" class="copy-btn" data-target="promptSkillMaker">コピー</button></div>
+          <pre id="promptSkillMaker"></pre>
+        </div>
+        <ul class="menu">
+          <li>ライバルの最新投稿からネタを提案するスキル</li>
+          <li>コメントへの返信文の案を出すスキル</li>
+          <li>リサーチや素材集めを代わりにやるスキル</li>
+        </ul>
+        <div class="callout info">
+          <p>新しく作ったスキルは、新しいセッションを開くと「/」の候補に現れます。今日の6つと同じように、あなたの仕事に合わせてどんどん増やしていけます。</p>
+        </div>
+        <p class="closing-line">AIは、育てるほど、あなたになる。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>分身AI × SNS投稿キット 導入マニュアル</p>
+      <p class="muted">ラッキーマイン　あべむつき / りょうや</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
